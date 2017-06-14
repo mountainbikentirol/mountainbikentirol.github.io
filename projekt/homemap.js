@@ -59,17 +59,12 @@ window.onload = function() {
 		
 		
 		function loadTrack(track) {
-			//Etappeninfo anzeigen
-				//console.log("etappeninfo: ", window.ETAPPENINFO);
-				console.log("gpx", window.TOURENINFO[track]);
-				//console.log("kurztext: ", window.ETAPPENINFO[track].Kurztext);
-				
-	 
-			
-			 // GPX Track laden
+		// GPX Track laden
 			gpxTrack = omnivore.gpx('bikedata/'+track).addTo(map);
-		
 		}
+		
+		// ROUTEN FUNKTIONIEREN NICHT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		
 		//Etappe laden (erfüllt gleiche Funktion wie "GPX Track laden" eins weiter unten)
 		//L.geoJSON(window.Karwendel.gpx).addTo(map);
 		//L.geoJSON(window.Pillersee.gpx).addTo(map);
@@ -83,8 +78,6 @@ window.onload = function() {
 		//var mtb = L.geoJSON(window.bikedata).addTo(map);
 		
 		
-		//gpxTrack = omnivore.gpx('bikedata/'+track).addTo(map);
-			
 					  
 				
 			gpxTrack.on("ready", function() {
@@ -93,37 +86,30 @@ window.onload = function() {
 				profil.clear();
 				gpxTrack.eachLayer(function(layer) {
 					profil.addData(layer.feature);
-					
-					//Je nachdem obs hoch, runter, oder waagrecht geht, soll Profil rot, grün oder gelb eingefärbt sein. 
 			
-					//console.log (layer.feature.geometry.coordinates)
+					
 					var pts = layer.feature.geometry.coordinates;
 				
 					for (var i = 1; i< pts.length; i+= 1){
-						//console.log(pts[i]);	//aktueller Punkt
-						//console.log(pts[i-1]);	//vorhergehender Punkt
+					
 				
 						// Entfernung bestimmen
 						var dist = map.distance (
 							[ pts[i][1],pts[i][0] ],
 							[ pts[i-1][1],pts[i-1][0] ]
 						).toFixed(0);
-						//console.log(dist);
+						
 				
 						var delta = pts[i][2] - pts[i-1][2];
-						//console.log(delta, "Höhenmeter auf", dist, "m Strecke");
+						
 					
 						var rad= Math.atan(delta/dist);
-						var deg = rad * (180 / Math.PI).toFixed(1); //toFixed: in Klammer stehen Nachkommastellen
-						//console.log(deg);
+						var deg = rad * (180 / Math.PI).toFixed(1); 
 						
-						//colorbrewer: Farbpaletten für Kartographie
-						
-						//var rot = ['#fee5d9','#fcbba1','#fc9272','#fb6a4a','#de2d26','#a50f15'] //rot: http://colorbrewer2.org/#type=sequential&scheme=Reds&n=6
-						//var gruen = ['#edf8e9','#c7e9c0','#a1d99b','#74c476','#31a354','#006d2c'] //grün: http://colorbrewer2.org/#type=sequential&scheme=Greens&n=6
+
 						
 						var farbe;
-						switch(true) { // checks if condition is true, not for certain values of a variable
+						switch(true) { 
 							case (deg >= 20) :  farbe = "#bd0026"; break;
 							case (deg >= 15) :  farbe = "'#f03b20"; break;
 							case (deg >= 10) :  farbe = "#fd8d3c"; break;
@@ -136,7 +122,7 @@ window.onload = function() {
 							case (deg >= -20):  farbe = "#31a354"; break;
 							case (deg < -20) :  farbe = "#006837"; break;
 						}
-						//console.log(farbe);
+					
 						
 					
 						var pointA = new L.LatLng(pts[i][1],pts[i][0]);
@@ -160,8 +146,6 @@ window.onload = function() {
 			});
 		
 			
-
-	
 		
 		var start = [
 		L.marker([47.392285, 11.267306], {title: "Startpunkt Karwendelrunde", icon: L.icon({iconUrl: 'icons/start-race-2.png'})}),

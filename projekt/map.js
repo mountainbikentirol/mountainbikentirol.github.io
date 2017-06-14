@@ -1,6 +1,4 @@
-//HTML ("index.html") und Skript ("map.js") wurden jetzt getrennt.
-
-window.onload = function() { //skript wird erst geladen, wenn Rest der Seite komplett geladen ist	
+window.onload = function() { 
 	
 	
         // WMTS-Layer basemap.at - Quelle: http://www.basemap.at/wmts/1.0.0/WMTSCapabilities.xml
@@ -66,28 +64,15 @@ window.onload = function() { //skript wird erst geladen, wenn Rest der Seite kom
 			});
 			profil.addTo(map);
 			
-			//ohne das hier ist das Diagramm (s. eins drüber) aber leer
-			//L.geoJSON(window.etappe07, {
-			//onEachFeature: profil.addData.bind(profil)
-			//}).addTo(map);
-		
-		//Etappe laden (erfüllt gleiche Funktion wie "GPX Track laden" eins weiter unten)
-		//L.geoJSON(window.etappe07).addTo(map);
-		
-		//***********function loadTrack(track){
-			
 		//Funktion zum Laden eines Tracks
 		function loadTrack(track) {
+			
 			//Etappeninfo anzeigen
-				//console.log("etappeninfo: ", window.ETAPPENINFO);
-				//console.log("gpx", window.TOURENINFO[track]);
-				//console.log("kurztext: ", window.ETAPPENINFO[track].Kurztext);
 				document.getElementById("Titel").innerHTML = window.TOURENINFO[track].Titel;
 				document.getElementById("Kurztext").innerHTML = window.TOURENINFO[track].Kurztext;
 				document.getElementById("ArtderTour").innerHTML = window.TOURENINFO[track].ArtderTour;
 				document.getElementById("Tourenbeschreibung").innerHTML = window.TOURENINFO[track].Tourenbeschreibung;
 				document.getElementById("Start").innerHTML = window.TOURENINFO[track].Start;
-				//document.getElementById("Ziel").innerHTML = window.TOURENINFO[track].Ziel;
 				document.getElementById("auf").innerHTML = window.TOURENINFO[track].auf;
 				document.getElementById("ab").innerHTML = window.TOURENINFO[track].ab;
 				document.getElementById("HoechsterPunkt").innerHTML = window.TOURENINFO[track].HoechsterPunkt;
@@ -111,26 +96,13 @@ window.onload = function() { //skript wird erst geladen, wenn Rest der Seite kom
 				//document.getElementById("wetterLink2").innerHTML = window.TOURENINFO[track].wetterLink2;
 				//document.getElementById("WetterOrt").innerHTML = window.TOURENINFO[track].WetterOrt;
 				
-			
-				
-			//var ohneGPX = track.substring(0, track.length-4);
-			//var ohneGPX2 = track.replace(".gpx", "");
-			//console.log("track ", ohneGPX, ohneGPX2);
-			//console.log("etappeninfo: ", window.ETAPPENINFO[ohneGPX]);
-		
-		//bestehenden Track, farbige Linie mit Steigung und Profil löschen
-			//gpxTrack.clearLayers();
-			//coloredLineGroup.clearLayers();
-			//profil.clear();
-			//******************
-	 
-			
+
 			 // GPX Track laden
 			gpxTrack = omnivore.gpx('bikedata/'+track).addTo(map);
 			
 			
 			
-			//POPUP NEUER VERSUCH
+			//POPUP NEUER VERSUCH: geht nicht
 			//marker.gpxTrack.bindPopup(getElementById("specials").openPopup();
 			
 			
@@ -138,17 +110,6 @@ window.onload = function() { //skript wird erst geladen, wenn Rest der Seite kom
 			//	var popup = document.getElementById("Titel");
 				//	popup.gpxTrack.toggle("show");
 			//}
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
 			
 			
 			
@@ -169,57 +130,41 @@ window.onload = function() { //skript wird erst geladen, wenn Rest der Seite kom
 				
 				
 			 // dies war unser Versuch die Pupups mitz dem jeweiligen Dateninhalten erscheinen zu lassen ...hat nicht funktioniert
-				var popup = document.getElementById("Titel").innerHTML = window.TOURENINFO[track].Titel;
-					gpxTrack.bindPopup(popup, { maxWidth : 450 });
+				//var popup = document.getElementById("Titel").innerHTML = window.TOURENINFO[track].Titel;
+					//gpxTrack.bindPopup(popup, { maxWidth : 450 });
 					
-			
-			
-			// Ausschnitt setzen (funktioniert nicht??????????????????)
-			   //map.fitBounds(gpxTrack.getBounds()); -------->Bounds are not valid
-			
-			//var Bounds = (gpxTrack.getBounds());
-			//map.fitBounds(Bounds); --------> ging auch nicht 
-			
-			
-			
-			
-			gpxTrack.on("ready", function() {
+
+	gpxTrack.on("ready", function() {
 				
 				// Höhenprofil erzeugen
 				profil.clear();
 				gpxTrack.eachLayer(function(layer) {
 					profil.addData(layer.feature);
 					
-					//Je nachdem obs hoch, runter, oder waagrecht geht, soll Profil rot, grün oder gelb eingefärbt sein. 
+					
 			
-					//console.log (layer.feature.geometry.coordinates)
+				
 					var pts = layer.feature.geometry.coordinates;
 				
 					for (var i = 1; i< pts.length; i+= 1){
-						//console.log(pts[i]);	//aktueller Punkt
-						//console.log(pts[i-1]);	//vorhergehender Punkt
-				
+						
 						// Entfernung bestimmen
 						var dist = map.distance (
 							[ pts[i][1],pts[i][0] ],
 							[ pts[i-1][1],pts[i-1][0] ]
 						).toFixed(0);
-						//console.log(dist);
+						
 				
 						var delta = pts[i][2] - pts[i-1][2];
-						//console.log(delta, "Höhenmeter auf", dist, "m Strecke");
+						
 					
 						var rad= Math.atan(delta/dist);
-						var deg = rad * (180 / Math.PI).toFixed(1); //toFixed: in Klammer stehen Nachkommastellen
-						//console.log(deg);
+						var deg = rad * (180 / Math.PI).toFixed(1); 
 						
-						//colorbrewer: Farbpaletten für Kartographie
 						
-						//var rot = ['#fee5d9','#fcbba1','#fc9272','#fb6a4a','#de2d26','#a50f15'] //rot: http://colorbrewer2.org/#type=sequential&scheme=Reds&n=6
-						//var gruen = ['#edf8e9','#c7e9c0','#a1d99b','#74c476','#31a354','#006d2c'] //grün: http://colorbrewer2.org/#type=sequential&scheme=Greens&n=6
-						
+
 						var farbe;
-						switch(true) { // checks if condition is true, not for certain values of a variable
+						switch(true) { 
 							case (deg >= 20) :  farbe = "#bd0026"; break;
 							case (deg >= 15) :  farbe = "'#f03b20"; break;
 							case (deg >= 10) :  farbe = "#fd8d3c"; break;
@@ -232,7 +177,7 @@ window.onload = function() { //skript wird erst geladen, wenn Rest der Seite kom
 							case (deg >= -20):  farbe = "#31a354"; break;
 							case (deg < -20) :  farbe = "#006837"; break;
 						}
-						//console.log(farbe);
+						
 						
 					
 						var pointA = new L.LatLng(pts[i][1],pts[i][0]);
@@ -280,7 +225,6 @@ window.onload = function() { //skript wird erst geladen, wenn Rest der Seite kom
 		for (var i=0; i<einkehr.length; i++) {
 		einkehrLayer.addLayer(einkehr[i]); 
 		};
-		// einkehrLayer.addTo(map);
 		
 		
 		var start = [
@@ -315,7 +259,6 @@ window.onload = function() { //skript wird erst geladen, wenn Rest der Seite kom
 		};
 		
 		
-		//Icons von https://mapicons.mapsmarker.com/
 		var parken = [
 		L.marker([47.392285, 11.267306],{title: "Parkplatz Karwendel", icon : L.icon({ iconUrl:'icons/parken.png'})}),
 		L.marker([47.491241, 12.528752],{title: "Parkplatz Pillersee", icon : L.icon({ iconUrl:'icons/parken.png'})}),
@@ -331,8 +274,7 @@ window.onload = function() { //skript wird erst geladen, wenn Rest der Seite kom
 		parkenLayer.addLayer(parken[i]);
 		};
 		
-		
-		
+
 		var lohnendeStops = [
 		L.marker([47.439611, 11.686361],{title: "Airrofan Skyglider - Rofan Cable Car Company", icon : L.icon({ iconUrl:'icons/sight-2.png'})}),
 		L.marker([47.430991, 11.734883],{title: "Strandbad Buchau ", icon : L.icon({ iconUrl:'icons/sight-2.png'})}),
