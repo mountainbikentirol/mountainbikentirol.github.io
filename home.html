@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Mountainbike-Touren in Tirol</title>
+
+    <link rel="stylesheet" href="js/leaflet/leaflet.css" />
+	<link rel="stylesheet" href="js/leaflet-elevation/leaflet.elevation-0.0.4.css" />
+    <script src="js/leaflet/leaflet.js"></script>
+    <script src="js/leaflet-hash/leaflet-hash.js"></script>
+	<script src="js/leaflet-elevation/leaflet.elevation-0.0.4.min.js"></script> 
+	<script src="https://d3js.org/d3.v3.min.js"></script>
+	<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
+	
+	<script src="bikedata/Guffertrunde.js"></script>
+	<script src="toureninfo.js"></script>
+	<script src="homemap.js"></script>
+	<link rel="stylesheet" href="styles.css" />
+	
+</head>
+
+
+<body>
+
+
+
+<h1>Mountainbiken in Tirol</h1>
+<h5>
+Die Kombination aus Geschwindigkeit, Adrenalin und herausragender Landschaft machen den besonderen Reiz am Mountainbiken aus. Um den bekannten und überlaufenen Trails zu entgehen und noch schönere Ecken Tirols kennenzulernen, findet Ihr hier acht Traumtouren, die Euch überraschen werden. Ihr braucht Euch um nichts zu kümmern, außer einer geschmierten Kette und Motivation. Die Planung der Touren haben wir für Euch übernommen, klickt Euch durch, ladet die Tracks herunter und ab die Post!  
+</h5>
+
+<div id="map"></div>
+   
+<p></p>
+   
+
+<table border="0">
+  <tr>
+    
+	<td>
+		<script type="text/javascript">document.write("<iframe id = \"widget\" width=\"300\" height=\"270\" src=\"http://www.wetter.at/wetter/oesterreich/tirol/seefeld-in-tirol/widget/w300/color-petrol?utm_source=widget&utm_medium="+top.location.hostname+"&utm_content="+top.location.href+"&utm_campaign=Wetter%2BWidget\" frameborder=\"0\" scrolling=\"no\"></iframe>");</script><center style="padding-top:5px; padding-bottom:5px; font-size:11px; line-height:15px; font-family:arial;"><a href="http://www.wetter.at/wetter/oesterreich/tirol/seefeld-in-tirol" style="color:#4787a9; text-decoration:none;" target="_blank">Das aktuelle Wetter für die Karwendeltour</a><br/></center><br />
+    </td>
+	<td>
+		<script type="text/javascript">document.write("<iframe id = \"widget\" width=\"300\" height=\"270\" src=\"http://www.wetter.at/wetter/oesterreich/tirol/fieberbrunn/widget/w300/color-petrol?utm_source=widget&utm_medium="+top.location.hostname+"&utm_content="+top.location.href+"&utm_campaign=Wetter%2BWidget\" frameborder=\"0\" scrolling=\"no\"></iframe>");</script><center style="padding-top:5px; padding-bottom:5px; font-size:11px; line-height:15px; font-family:arial;"><a href="http://www.wetter.at/wetter/oesterreich/tirol/fieberbrunn" style="color:#4787a9; text-decoration:none;" target="_blank">Das aktuelle Wetter für die Pillerseetour</a><br/></center><br />
+	</td>
+	
+	<td>
+		<script type="text/javascript">document.write("<iframe id = \"widget\" width=\"300\" height=\"270\" src=\"http://www.wetter.at/wetter/oesterreich/tirol/innsbruck/widget/w300/color-petrol?utm_source=widget&utm_medium="+top.location.hostname+"&utm_content="+top.location.href+"&utm_campaign=Wetter%2BWidget\" frameborder=\"0\" scrolling=\"no\"></iframe>");</script><center style="padding-top:5px; padding-bottom:5px; font-size:11px; line-height:15px; font-family:arial;"><a href="http://www.wetter.at/wetter/oesterreich/tirol/innsbruck" style="color:#4787a9; text-decoration:none;" target="_blank">Das aktuelle Wetter für die Maria Waldrasttour</a><br/></center><br />
+    </td>
+	
+	<td>
+		<script type="text/javascript">document.write("<iframe id = \"widget\" width=\"300\" height=\"270\" src=\"http://www.wetter.at/wetter/oesterreich/tirol/koessen/widget/w300/color-petrol?utm_source=widget&utm_medium="+top.location.hostname+"&utm_content="+top.location.href+"&utm_campaign=Wetter%2BWidget\" frameborder=\"0\" scrolling=\"no\"></iframe>");</script><center style="padding-top:5px; padding-bottom:5px; font-size:11px; line-height:15px; font-family:arial;"><a href="http://www.wetter.at/wetter/oesterreich/tirol/koessen" style="color:#4787a9; text-decoration:none;" target="_blank">Das aktuelle Wetter für die Kaiserwinkltour</a><br/></center><br />
+	</td>
+	
+	</tr>
+	<tr>
+	<td>
+		<script type="text/javascript">document.write("<iframe id = \"widget\" width=\"300\" height=\"270\" src=\"http://www.wetter.at/wetter/oesterreich/tirol/hopfgarten-im-brixental/widget/w300/color-petrol?utm_source=widget&utm_medium="+top.location.hostname+"&utm_content="+top.location.href+"&utm_campaign=Wetter%2BWidget\" frameborder=\"0\" scrolling=\"no\"></iframe>");</script><center style="padding-top:5px; padding-bottom:5px; font-size:11px; line-height:15px; font-family:arial;"><a href="http://www.wetter.at/wetter/oesterreich/tirol/hopfgarten-im-brixental" style="color:#4787a9; text-decoration:none;" target="_blank">Das aktuelle Wetter für die Tour an der Hohen Salve</a><br/></center><br />
+	</td>
+	
+	<td>
+	    <script type="text/javascript">document.write("<iframe id = \"widget\" width=\"300\" height=\"270\" src=\"http://www.wetter.at/wetter/oesterreich/tirol/nassereith/widget/w300/color-petrol?utm_source=widget&utm_medium="+top.location.hostname+"&utm_content="+top.location.href+"&utm_campaign=Wetter%2BWidget\" frameborder=\"0\" scrolling=\"no\"></iframe>");</script><center style="padding-top:5px; padding-bottom:5px; font-size:11px; line-height:15px; font-family:arial;"><a href="http://www.wetter.at/wetter/oesterreich/tirol/nassereith" style="color:#4787a9; text-decoration:none;" target="_blank">Das aktuelle Wetter für die Marienbergjochtour</a><br/></center><br />
+	</td>
+	<td>
+		<script type="text/javascript">document.write("<iframe id = \"widget\" width=\"300\" height=\"270\" src=\"http://www.wetter.at/wetter/oesterreich/tirol/brandenberg/widget/w300/color-petrol?utm_source=widget&utm_medium="+top.location.hostname+"&utm_content="+top.location.href+"&utm_campaign=Wetter%2BWidget\" frameborder=\"0\" scrolling=\"no\"></iframe>");</script><center style="padding-top:5px; padding-bottom:5px; font-size:11px; line-height:15px; font-family:arial;"><a href="http://www.wetter.at/wetter/oesterreich/tirol/brandenberg" style="color:#4787a9; text-decoration:none;" target="_blank">Das aktuelle Wetter für die Guffertrunde</a><br/></center><br />
+	</td>
+	<td>
+		<script type="text/javascript">document.write("<iframe id = \"widget\" width=\"300\" height=\"270\" src=\"http://www.wetter.at/wetter/oesterreich/tirol/oetz/widget/w300/color-petrol?utm_source=widget&utm_medium="+top.location.hostname+"&utm_content="+top.location.href+"&utm_campaign=Wetter%2BWidget\" frameborder=\"0\" scrolling=\"no\"></iframe>");</script><center style="padding-top:5px; padding-bottom:5px; font-size:11px; line-height:15px; font-family:arial;"><a href="http://www.wetter.at/wetter/oesterreich/tirol/oetz" style="color:#4787a9; text-decoration:none;" target="_blank">Das aktuelle Wetter für die vordere Ötztaltour</a><br/></center><br />
+	</td>
+	
+  </tr>
+</table>
+
+ <p class="author"><a href="https://llenainnsbruck.github.io/adlerweg/index.html">Hier </a> der Link zur Seite der Autoren Tabea Hengst, Matthias von Stackelberg, Lena Grüb</p>
+	
+
+    <script>
+//das skript ist in getrennter Datei "map.js" gespeichert
+    </script>
+
+</body>
+
+</html>
