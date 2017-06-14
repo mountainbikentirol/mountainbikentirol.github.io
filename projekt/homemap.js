@@ -57,11 +57,12 @@ window.onload = function() {
         // leaflet-hash aktivieren
         var hash = new L.Hash(map);
 		
-		
+
 		function loadTrack(track) {
 		// GPX Track laden
+	
 			gpxTrack = omnivore.gpx('bikedata/'+track).addTo(map);
-		}
+		
 		
 		// ROUTEN FUNKTIONIEREN NICHT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 		
@@ -145,7 +146,7 @@ window.onload = function() {
 				});
 			});
 		
-			
+		}	
 		
 		var start = [
 		L.marker([47.392285, 11.267306], {title: "Startpunkt Karwendelrunde", icon: L.icon({iconUrl: 'icons/start-race-2.png'})}),
@@ -161,6 +162,15 @@ window.onload = function() {
 		for (var i=0; i<start.length; i++) {
 		startLayer.addLayer(start[i]); 
 		};
+		
+		map.on("zoomend", function () {
+			if (map.getZoom() >=10) {
+				startLayer.addTo(map);
+			} else {
+				map.removeLayer(startLayer);
+				
+			}
+		});
 		
 				
 }

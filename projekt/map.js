@@ -200,7 +200,8 @@ window.onload = function() {
 				});
 			});
 		
-		}	
+		}
+		
 		//Icons von https://mapicons.mapsmarker.com/
 		var einkehr = [
 		L.marker([47.439611, 11.686361],{title: "Langlaufstüberl", icon : L.icon({ iconUrl:'icons/hut.png'})}),
