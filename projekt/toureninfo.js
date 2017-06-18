@@ -40,6 +40,8 @@ window.TOURENINFO =
 		"wetterLink1": "http://www.wetter.at/wetter/oesterreich/tirol/seefeld-in-tirol/widget/w300/color-petrol?utm_source=widget&utm_medium=",
 		 "wetterLink2": "http://www.wetter.at/wetter/oesterreich/tirol/seefeld-in-tirol",
 		 "WetterOrt": "Seefeld in Tirol",
+		 
+		 //"Foto": "bilder/risstal-karwendel.jpg",
 	  }
 		 
    ,
@@ -80,12 +82,13 @@ window.TOURENINFO =
          "specials1Koordinaten": "47.587565, 12.565102",
          "specials1Website": "http://www.steinplatte.tirol/de/aussichtsplattform-1.html",
 		 
+		 //"Foto": "bilder/waidrig_pillersee.jpg",
       }
    ,
    "MariaWaldrast.gpx": 
       {
          "Titel": "Maria Waldrast",
-         "Kurztext": "Ausgangspunkt ist der Bahnhof in Innsbruck. Mit dem Zug geht es zunächst nach Matrei am Brenner. Vom Bahnhof radelt man in nördlicher Richtung durch das Ortszentrum bis zur Abzweigung „Mützens, Wallfahrtskirche Maria Waldrast“. Hier zweigt man links ab. Die Route führt zunächst unter der Autobahn hindurch zum Ortsteil Mützens. Nach den letzten Häusern passiert man die Mautstelle und radelt zunächst entlang des Waldraster Baches. Die Strecke führt dann in einigen Serpentinen bis ins Almgelände und weiter zum Wallfahrtskloster Maria Waldrast. Hier endet die asphaltierte Straße und man fährt geradeaus weiter auf einem Forstweg bis zum höchsten Punkt, der gleichzeitig den Übergang ins Stubai darstellt. Hier gabelt sich die Forststraße und man nimmt die Abzweigung Richtung Mieders. Die Route (Nr. 559) führt nun immer abwärts bis zu den ersten Häusern in Mieders. Bei der Talstation der Seilbahn fährt man links auf der Straße Richtung Fulpmes („Kleine Talrunde 566“). Nach 600 Metern zweigt man rechts ab. Immer geradeaus abwärts folgt man der Straße, bald unter der Stubaitalstraße durch, bis zur Brücke über die Ruetz. Nach Überqueren der Brücke radelt man rechts weiter talauswärts Richtung „Gallhof, Telfer Wiesen“. Die Strecke steigt bald wieder an und der Forstweg gabelt sich bei Kilometer 18,7. Links aufwärts folgt man dem Weg „Telfer Wiesen“. Kurz nachdem man die Gleise der Stubaitalbahn überquert hat zweigt man spitzwinkelig rechts ab und radelt Richtung „Kreith, Mutters“. Die Route führt nun in leichtem Auf und Ab durch Wiesen und Wälder fast immer parallel zur Bahn bis zum Mutterer Ortsteil Kreith. Bei Erreichen der Asphaltstraße in Kreith folgt man dieser geradeaus bis zur Kirche von Mutters. Hier radelt man halbrechts abwärts Richtung Innsbruck, bis man kurz danach wieder die Bahngleise überquert. Sofort danach zweigt die Route Richtung Natters ab. Weiter geht es durch das Dorfzentrum und auf der Straße Richtung Innsbruck. Bei einem Kreisverkehr erreicht man die Brennerbundesstraße und fährt auf dieser einen guten Kilometer Richtung Innsbruck. Kurz vor dem Bahnübergang zweigt man rechts ab in eine Seitenstraße (Auto- und Motorradfahrverbot). Diese Straße führt bis zur Bergiselsprungschanze (Zufahrtshinweise beachten!). Vom Sprungstadion radelt man weiter abwärts bis man wieder auf die Bundesstraße gelangt. Immer geradeaus führt die Route vorbei am Stift Wilten (rechterhand) und der Wiltener Basilika (linkerhand) ins Zentrum von Innsbruck. Entlang der Leopoldstraße fährt man bis zur Triumphpforte. Hier zweigt man rechts in die Salurner Straße ab und erreicht nach etwa 300 Metern den Innsbrucker Hauptbahnhof.",
+         "Kurztext": "Mit dem Zug von Innsbruck nach Matrei und übers Stubeital zurück. Diese wunderschöne Tour am Hang der Serles entlang lässt sich mit 4 Stunden Fahrtzeit an einem Nachmittag gemütlich einschieben und bietet für den kurzen Zeitraum einige schöne Ausblicke. Der Mittlere Schwierigkeitsgrad sollte für jeden der nicht das erste mal auf dem Bike sitzt schaffbar sein.",
          "ArtderTour": "Rundtour",
          "Tourenbeschreibung": "Ausgangspunkt ist der Bahnhof in Innsbruck. Mit dem Zug geht es zunächst nach Matrei am Brenner. Vom Bahnhof radelt man in nördlicher Richtung durch das Ortszentrum bis zur Abzweigung „Mützens, Wallfahrtskirche Maria Waldrast“. Hier zweigt man links ab. Die Route führt zunächst unter der Autobahn hindurch zum Ortsteil Mützens. Nach den letzten Häusern passiert man die Mautstelle und radelt zunächst entlang des Waldraster Baches. Die Strecke führt dann in einigen Serpentinen bis ins Almgelände und weiter zum Wallfahrtskloster Maria Waldrast. Hier endet die asphaltierte Straße und man fährt geradeaus weiter auf einem Forstweg bis zum höchsten Punkt, der gleichzeitig den Übergang ins Stubai darstellt. Hier gabelt sich die Forststraße und man nimmt die Abzweigung Richtung Mieders. Die Route (Nr. 559) führt nun immer abwärts bis zu den ersten Häusern in Mieders. Bei der Talstation der Seilbahn fährt man links auf der Straße Richtung Fulpmes („Kleine Talrunde 566“). Nach 600 Metern zweigt man rechts ab. Immer geradeaus abwärts folgt man der Straße, bald unter der Stubaitalstraße durch, bis zur Brücke über die Ruetz. Nach Überqueren der Brücke radelt man rechts weiter talauswärts Richtung „Gallhof, Telfer Wiesen“. Die Strecke steigt bald wieder an und der Forstweg gabelt sich bei Kilometer 18,7. Links aufwärts folgt man dem Weg „Telfer Wiesen“. Kurz nachdem man die Gleise der Stubaitalbahn überquert hat zweigt man spitzwinkelig rechts ab und radelt Richtung „Kreith, Mutters“. Die Route führt nun in leichtem Auf und Ab durch Wiesen und Wälder fast immer parallel zur Bahn bis zum Mutterer Ortsteil Kreith. Bei Erreichen der Asphaltstraße in Kreith folgt man dieser geradeaus bis zur Kirche von Mutters. Hier radelt man halbrechts abwärts Richtung Innsbruck, bis man kurz danach wieder die Bahngleise überquert. Sofort danach zweigt die Route Richtung Natters ab. Weiter geht es durch das Dorfzentrum und auf der Straße Richtung Innsbruck. Bei einem Kreisverkehr erreicht man die Brennerbundesstraße und fährt auf dieser einen guten Kilometer Richtung Innsbruck. Kurz vor dem Bahnübergang zweigt man rechts ab in eine Seitenstraße (Auto- und Motorradfahrverbot). Diese Straße führt bis zur Bergiselsprungschanze (Zufahrtshinweise beachten!). Vom Sprungstadion radelt man weiter abwärts bis man wieder auf die Bundesstraße gelangt. Immer geradeaus führt die Route vorbei am Stift Wilten (rechterhand) und der Wiltener Basilika (linkerhand) ins Zentrum von Innsbruck. Entlang der Leopoldstraße fährt man bis zur Triumphpforte. Hier zweigt man rechts in die Salurner Straße ab und erreicht nach etwa 300 Metern den Innsbrucker Hauptbahnhof.",
          "Koordinaten Start": "47.263363, 11.400469",
@@ -119,6 +122,7 @@ window.TOURENINFO =
          "specials1Koordinaten": "47.136798, 11.453339",
          "specials1Website": "http://www.tirol-infos.at/innsbruck/mariae-himmelfahrt-bei-pfons.html",
 		 
+		// "Foto": "bilder/MarieWaldrast.jpg",
       }
    ,
    "Kaiserwinkl.gpx": 
@@ -157,7 +161,7 @@ window.TOURENINFO =
          "specials1Koordinaten": "47.557505, 12.447250",
          "specials1Website": "https://www.kitzbueheler-alpen.com/de/kirchdorf/info/museum-im-metzgerhaus.html",
 		 
-		 
+		 //"Foto": "bilder/walchensee-Kaiswinkl.jpg",
       }
    ,
    "HoheSalve.gpx": 
@@ -196,7 +200,7 @@ window.TOURENINFO =
 		 "specials1": "Hexenwasser",
          "specials1Koordinaten": "47.480283, 12.197561",
          "specials1Website": "http://www.hexenwasser.at/de/homepage/",
-		 
+		 //"Foto": "bilder/wilder-kaiser-Brixental-Hohe salve.jpg",
       }
    ,
    "Marienbergjoch.gpx": 
@@ -235,6 +239,7 @@ window.TOURENINFO =
          "specials1Koordinaten": "47.345703, 10.817517",
          "specials1Website": "https://de.wikipedia.org/wiki/Burg_Fernstein",
 		 
+		 //"Foto": "bilder/marienbergjoch.jpg",
       }
    ,
    "Guffertrunde.gpx": 
@@ -269,7 +274,8 @@ window.TOURENINFO =
          "specials": "Kaiserklamm",
          "specialsKoordinaten": "47.540179, 11.916547",
          "specialsWebsite": "https://www.alpbachtal.at/de/sommer/wandern/naturerlebnisklammen/kaiserklamm",
-		 "bild": "bilder/Kaiserhaus-Guffertrunde.jpg", 
+		 
+		 //"Foto": "bilder/Kaiserhaus-Guffertrunde.jpg", 
       
 		
       }
@@ -310,6 +316,7 @@ window.TOURENINFO =
          "specials1Koordinaten": "47.228989, 10.844389",
          "specials1Website": "area47.at",
 		 
+		 //"Foto": "sautens-oetztal.jpg", 
       }
    
 }

@@ -32,8 +32,8 @@ window.onload = function() {
         // Karte definieren
         var map = L.map('map', {
             layers: [layers.geolandbasemap],
-            center : [47.654, 13.370],
-            zoom : 8
+            center : [47.271604, 11.753858],
+            zoom : 9
         });
 
         // Maßstab hinzufügen
@@ -58,119 +58,35 @@ window.onload = function() {
         var hash = new L.Hash(map);
 		
 
-		function loadTrack(track) {
-		// GPX Track laden
+		
+		//GPX Tracks laden
+		var gpxKarwendel = omnivore.gpx("bikedata/Karwendel.gpx").addTo(map);
+		var gpxPillerseetal = omnivore.gpx("bikedata/Pillerseetal.gpx").addTo(map);
+		var gpxMariaWaldrast = omnivore.gpx("bikedata/MariaWaldrast.gpx").addTo(map);
+		var gpxKaiserwinkl = omnivore.gpx("bikedata/Kaiserwinkl.gpx").addTo(map);
+		var gpxHoheSalve = omnivore.gpx("bikedata/HoheSalve.gpx").addTo(map);
+		var gpxMarienbergjoch = omnivore.gpx("bikedata/Marienbergjoch.gpx").addTo(map);
+		var gpxGuffertrunde = omnivore.gpx("bikedata/Guffertrunde.gpx").addTo(map);
+		var gpxVorderesOetztal = omnivore.gpx("bikedata/VorderesOetztal.gpx").addTo(map);
+		
+		gpxKarwendel.bindPopup(
+        '<h4>Karwendel</h4><a target="_blank" href="index.html">Detailbeschreibung</a>');
+		gpxPillerseetal.bindPopup(
+        '<h4>Pillerseetal</h4><a target="_blank" href="index.html">Detailbeschreibung</a>');
+		gpxMariaWaldrast.bindPopup(
+        '<h4>MariaWaldrast</h4><a target="_blank" href="index.html">Detailbeschreibung</a>');
+		gpxKaiserwinkl.bindPopup(
+        '<h4>Kaiserwinkl</h4><a target="_blank" href="index.html">Detailbeschreibung</a>');
+		gpxHoheSalve.bindPopup(
+        '<h4>HoheSalve</h4><a target="_blank" href="index.html">Detailbeschreibung</a>');
+		gpxMarienbergjoch.bindPopup(
+        '<h4>Marienbergjoch</h4><a target="_blank" href="index.html">Detailbeschreibung</a>');
+		gpxGuffertrunde.bindPopup(
+        '<h4>Guffertrunde</h4><a target="_blank" href="index.html">Detailbeschreibung</a>');
+		gpxVorderesOetztal.bindPopup(
+        '<h4>VorderesOetztal</h4><a target="_blank" href="index.html">Detailbeschreibung</a>');
 	
-			gpxTrack = omnivore.gpx('bikedata/'+track).addTo(map);
 		
-		
-		// ROUTEN FUNKTIONIEREN NICHT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-		
-		//Etappe laden (erfüllt gleiche Funktion wie "GPX Track laden" eins weiter unten)
-		//L.geoJSON(window.Karwendel.gpx).addTo(map);
-		//L.geoJSON(window.Pillersee.gpx).addTo(map);
-		//L.geoJSON(window.MariaWaldrast.gpx).addTo(map);
-		//L.geoJSON(window.Kaiserwinkl.gpx).addTo(map);
-		//L.geoJSON(window.HoheSalve.gpx).addTo(map);
-		//L.geoJSON(window.Marienbergjoch.gpx).addTo(map);
-		//L.geoJSON(window.Guffertrunde.gpx).addTo(map);
-		//L.geoJSON(window.VorderesOetztal.gpx).addTo(map);
-		
-		//var mtb = L.geoJSON(window.bikedata).addTo(map);
-		
-		
-					  
-				
-			gpxTrack.on("ready", function() {
-				
-				// Höhenprofil erzeugen
-				profil.clear();
-				gpxTrack.eachLayer(function(layer) {
-					profil.addData(layer.feature);
-			
-					
-					var pts = layer.feature.geometry.coordinates;
-				
-					for (var i = 1; i< pts.length; i+= 1){
-					
-				
-						// Entfernung bestimmen
-						var dist = map.distance (
-							[ pts[i][1],pts[i][0] ],
-							[ pts[i-1][1],pts[i-1][0] ]
-						).toFixed(0);
-						
-				
-						var delta = pts[i][2] - pts[i-1][2];
-						
-					
-						var rad= Math.atan(delta/dist);
-						var deg = rad * (180 / Math.PI).toFixed(1); 
-						
 
-						
-						var farbe;
-						switch(true) { 
-							case (deg >= 20) :  farbe = "#bd0026"; break;
-							case (deg >= 15) :  farbe = "'#f03b20"; break;
-							case (deg >= 10) :  farbe = "#fd8d3c"; break;
-							case (deg >= 5)  :  farbe = "#feb24c"; break;
-							case (deg >= 1)  :  farbe = "#fed976"; break;
-							case (deg >= -1) :  farbe = "yellow"; break;
-							case (deg >= -5) :  farbe = "#d9f0a3"; break;
-							case (deg >=-10) :  farbe = "#addd8e"; break;
-							case (deg >=-15) :  farbe = "#78c679"; break;
-							case (deg >= -20):  farbe = "#31a354"; break;
-							case (deg < -20) :  farbe = "#006837"; break;
-						}
-					
-						
-					
-						var pointA = new L.LatLng(pts[i][1],pts[i][0]);
-						var pointB = new L.LatLng(pts[i-1][1],pts[i-1][0]);
-						var pointList = [pointA, pointB];
-		   
-						var firstpolyline = new L.Polyline(pointList, {
-							color: farbe,
-							weight: 6,
-							opacity: 0.5,
-							smoothFactor: 1
-
-						});
-			
-						firstpolyline.addTo(map);
-					
-					map.fitBounds(gpxTrack.getBounds());
-					
-					}
-				});
-			});
-		
-		}	
-		
-		var start = [
-		L.marker([47.392285, 11.267306], {title: "Startpunkt Karwendelrunde", icon: L.icon({iconUrl: 'icons/start-race-2.png'})}),
-		L.marker([47.476926, 12.544588], {title: "Startpunkt Pillersee-Runde", icon: L.icon({iconUrl: 'icons/start-race-2.png'})}),
-		L.marker([47.263363, 11.400469], {title: "Startpunkt Maria Waldrast-Runde", icon: L.icon({iconUrl: 'icons/start-race-2.png'})}),
-		L.marker([47.668861, 12.404069], {title: "Startpunkt Kaiserwinkl-Runde", icon: L.icon({iconUrl: 'icons/start-race-2.png'})}),
-		L.marker([47.446109, 12.162167], {title: "Startpunkt Hohe Salve-Runde", icon: L.icon({iconUrl: 'icons/start-race-2.png'})}),
-		L.marker([47.319768, 10.830670], {title: "Startpunkt Marienbergjoch-Runde", icon: L.icon({iconUrl: 'icons/start-race-2.png'})}),
-		L.marker([47.536660, 11.913398], {title: "Startpunkt Guffertrunde", icon: L.icon({iconUrl: 'icons/start-race-2.png'})}),
-		L.marker([47.198614, 10.902923], {title: "Startpunkt Runde im vorderen Ötztal", icon: L.icon({iconUrl: 'icons/start-race-2.png'})})
-		];
-		var startLayer = L.featureGroup();
-		for (var i=0; i<start.length; i++) {
-		startLayer.addLayer(start[i]); 
-		};
-		
-		map.on("zoomend", function () {
-			if (map.getZoom() >=10) {
-				startLayer.addTo(map);
-			} else {
-				map.removeLayer(startLayer);
-				
-			}
-		});
-		
 				
 }

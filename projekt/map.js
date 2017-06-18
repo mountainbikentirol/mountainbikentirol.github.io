@@ -90,7 +90,7 @@ window.onload = function() {
 				document.getElementById("specials1").innerHTML = window.TOURENINFO[track].specials1;
 				document.getElementById("specials1Website").innerHTML = '<a href="' + window.TOURENINFO[track].specials1Website +'"> mehr Infos </a>';
 				document.getElementById("Quelle").innerHTML = '<a href="' + window.TOURENINFO[track].Quelle +'"> hier </a>';
-				//document.getElementById("bild").innerHTML = 'img src="' + window.TOURENINFO[track].bild +'"> <img>;
+				//document.getElementById("Foto").innerHTML = '<img src="' + window.TOURENINFO[track].Foto +'"> <img>';
 				
 				//document.getElementById("wetterLink1").innerHTML = window.TOURENINFO[track].wetterLink1;
 				//document.getElementById("wetterLink2").innerHTML = window.TOURENINFO[track].wetterLink2;
@@ -305,7 +305,7 @@ window.onload = function() {
 		
 		//nur wenn reingezoomt wird, sollen icons angezeigt werden
 		map.on("zoomend", function () {
-			if (map.getZoom() >=15) {
+			if (map.getZoom() >=12) {
 				einkehrLayer.addTo(map);
 				parkenLayer.addTo(map);
 				lohnendeStopsLayer.addTo(map);
@@ -327,6 +327,6 @@ window.onload = function() {
 				console.log("GPX Track laden: ", tourenSelektor.selectedIndex);
 				loadTrack(tourenSelektor.options[tourenSelektor.options.selectedIndex].value);
 			}
-			loadTrack("Guffertrunde.gpx")
+			loadTrack("Karwendel.gpx")
 					
 }
