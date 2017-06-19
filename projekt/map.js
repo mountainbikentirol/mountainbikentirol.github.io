@@ -81,15 +81,15 @@ window.onload = function() {
 				document.getElementById("Zeit").innerHTML = window.TOURENINFO[track].Zeit;
 				document.getElementById("Einkehr").innerHTML = window.TOURENINFO[track].Einkehr;
 				document.getElementById("Einkehr1").innerHTML = window.TOURENINFO[track].Einkehr1;
-				document.getElementById("EinkehrHomepage").innerHTML = '<a href="' + window.TOURENINFO[track].EinkehrHomepage +'"> mehr Infos </a>';
-				document.getElementById("Einkehr1Homepage").innerHTML = '<a href="' + window.TOURENINFO[track].Einkehr1Homepage +'"> mehr Infos </a>';
+				document.getElementById("EinkehrHomepage").innerHTML = '<a target="_blank" href="' + window.TOURENINFO[track].EinkehrHomepage +'"> mehr Infos </a>';
+				document.getElementById("Einkehr1Homepage").innerHTML = '<a target="_blank" href="' + window.TOURENINFO[track].Einkehr1Homepage +'"> mehr Infos </a>';
 				document.getElementById("Parkplatz").innerHTML = window.TOURENINFO[track].Parkplatz;
 				document.getElementById("Gebirgszug").innerHTML = window.TOURENINFO[track].Gebirgszug;
 				document.getElementById("specials").innerHTML = window.TOURENINFO[track].specials;
-				document.getElementById("specialsWebsite").innerHTML = '<a href="' + window.TOURENINFO[track].specialsWebsite +'"> mehr Infos </a>';
+				document.getElementById("specialsWebsite").innerHTML = '<a target="_blank" href="' + window.TOURENINFO[track].specialsWebsite +'"> mehr Infos </a>';
 				document.getElementById("specials1").innerHTML = window.TOURENINFO[track].specials1;
-				document.getElementById("specials1Website").innerHTML = '<a href="' + window.TOURENINFO[track].specials1Website +'"> mehr Infos </a>';
-				document.getElementById("Quelle").innerHTML = '<a href="' + window.TOURENINFO[track].Quelle +'"> hier </a>';
+				document.getElementById("specials1Website").innerHTML = '<a target="_blank" href="' + window.TOURENINFO[track].specials1Website +'"> mehr Infos </a>';
+				document.getElementById("Quelle").innerHTML = '<a target="_blank" href="' + window.TOURENINFO[track].Quelle +'"> hier </a>';
 				document.getElementById("Foto").innerHTML = '<img class="Bild" src="' + window.TOURENINFO[track].Foto +'"> <img>';
 				
 
