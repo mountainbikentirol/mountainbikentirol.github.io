@@ -262,6 +262,10 @@ window.TOURENINFO = {
         "specialsKoordinaten": "47.540179, 11.916547",
         "specialsWebsite": "https://www.alpbachtal.at/de/sommer/wandern/naturerlebnisklammen/kaiserklamm",
 
+		"specials1": "Dorfhaus Steinberg",
+        "specials1Koordinaten": "47.513856, 11.801169",
+        "specials1Website": "https://m.facebook.com/Dorfhaus.Steinberg/",
+		
         "Foto": "bilder/Kaiserhaus-Guffertrunde.jpg",
 
 
