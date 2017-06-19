@@ -55,7 +55,7 @@ window.onload = function() {
         }).addTo(map);
 
         // leaflet-hash aktivieren
-        var hash = new L.Hash(map);
+        //var hash = new L.Hash(map);
 		
 		//hier ELEVATION EINFÜGEN
 		
@@ -90,49 +90,13 @@ window.onload = function() {
 				document.getElementById("specials1").innerHTML = window.TOURENINFO[track].specials1;
 				document.getElementById("specials1Website").innerHTML = '<a href="' + window.TOURENINFO[track].specials1Website +'"> mehr Infos </a>';
 				document.getElementById("Quelle").innerHTML = '<a href="' + window.TOURENINFO[track].Quelle +'"> hier </a>';
-				//document.getElementById("Foto").innerHTML = '<img src="' + window.TOURENINFO[track].Foto +'"> <img>';
-				
-				//document.getElementById("wetterLink1").innerHTML = window.TOURENINFO[track].wetterLink1;
-				//document.getElementById("wetterLink2").innerHTML = window.TOURENINFO[track].wetterLink2;
-				//document.getElementById("WetterOrt").innerHTML = window.TOURENINFO[track].WetterOrt;
+				document.getElementById("Foto").innerHTML = '<img class="Bild" src="' + window.TOURENINFO[track].Foto +'"> <img>';
 				
 
 			 // GPX Track laden
 			gpxTrack = omnivore.gpx('bikedata/'+track).addTo(map);
 			
 			
-			
-			//POPUP NEUER VERSUCH: geht nicht
-			//marker.gpxTrack.bindPopup(getElementById("specials").openPopup();
-			
-			
-			//function myFunction() {
-			//	var popup = document.getElementById("Titel");
-				//	popup.gpxTrack.toggle("show");
-			//}
-			
-			
-			
-			// HUHUUUUUUUUUUUUUUUUUUUUUUUUUUUUU Matze:), könntest du hier auch noch mal schauen? Wie bekommen wir es hin, dass Popups beim "drauf clicken" der jeweiligen Tour erscheinen zu lassen, mit den Daten: Titel, Länge, Zeit, Schwierigkeit und vllt. später noch einem Bild (müssen nach den Bildern, aber erst noch schauen)
-			
-			//Popup hinzufügen
-			//var markup = '<div id="Titel"></div>';
-			//gpxTrack.bindPopup(markup, { maxWidth : 450 });
-	
-			
-			// Popup hinzufügen
-				//var markup = '<h3><div id="Titel"></div></h3>';
-				//markup += '<li><p><div id="Zeit"></div></p>';
-				//markup += '<li><div id="Laenge"></div></li>';
-				//markup += '<li><div id="Schwierigkeit"></div></li>';
-				
-				//gpxTrack.bindPopup(markup, { maxWidth : 450 });
-				
-				
-			 // dies war unser Versuch die Pupups mitz dem jeweiligen Dateninhalten erscheinen zu lassen ...hat nicht funktioniert
-				//var popup = document.getElementById("Titel").innerHTML = window.TOURENINFO[track].Titel;
-					//gpxTrack.bindPopup(popup, { maxWidth : 450 });
-					
 
 	gpxTrack.on("ready", function() {
 				
@@ -320,13 +284,30 @@ window.onload = function() {
 			}
 		});
 					
-
+			
+		
+			
 			var tourenSelektor = document.getElementById("gpx"); 
 			tourenSelektor.onchange = function(evt) {
 				console.log("change event: ", evt);
 				console.log("GPX Track laden: ", tourenSelektor.selectedIndex);
 				loadTrack(tourenSelektor.options[tourenSelektor.options.selectedIndex].value);
 			}
-			loadTrack("Karwendel.gpx")
+			
+			if (window.location.search) {
+                var gpx = window.location.search.split("=")[1];
+                for (var i = 0; i < tourenSelektor.options.length; i += 1) {
+                    if (tourenSelektor.options[i].value == gpx) {
+                        // Menüeintrag selektieren
+                        tourenSelektor.options.selectedIndex = i;
+                        
+                        // Track laden
+                        loadTrack(gpx);
+                    }
+                }
+            }
+			else loadTrack("Karwendel.gpx")
 					
 }
+
+

@@ -70,21 +70,21 @@ window.onload = function() {
 		var gpxVorderesOetztal = omnivore.gpx("bikedata/VorderesOetztal.gpx").addTo(map);
 		
 		gpxKarwendel.bindPopup(
-        '<h4>Karwendel</h4><a target="_blank" href="index.html">Detailbeschreibung</a>');
+        '<h4>Karwendel</h4><a href="touren.html?gpx=Karwendel.gpx">Detailbeschreibung</a>');
 		gpxPillerseetal.bindPopup(
-        '<h4>Pillerseetal</h4><a target="_blank" href="index.html">Detailbeschreibung</a>');
+        '<h4>Pillerseetal</h4><a href="touren.html?gpx=Pillerseetal.gpx">Detailbeschreibung</a>');
 		gpxMariaWaldrast.bindPopup(
-        '<h4>MariaWaldrast</h4><a target="_blank" href="index.html">Detailbeschreibung</a>');
+        '<h4>MariaWaldrast</h4><a href="touren.html?gpx=MariaWaldrast.gpx">Detailbeschreibung</a>');
 		gpxKaiserwinkl.bindPopup(
-        '<h4>Kaiserwinkl</h4><a target="_blank" href="index.html">Detailbeschreibung</a>');
+        '<h4>Kaiserwinkl</h4><a href="touren.html?gpx=Kaiserwinkl.gpx">Detailbeschreibung</a>');
 		gpxHoheSalve.bindPopup(
-        '<h4>HoheSalve</h4><a target="_blank" href="index.html">Detailbeschreibung</a>');
+        '<h4>HoheSalve</h4><a href="touren.html?gpx=HoheSalve.gpx">Detailbeschreibung</a>');
 		gpxMarienbergjoch.bindPopup(
-        '<h4>Marienbergjoch</h4><a target="_blank" href="index.html">Detailbeschreibung</a>');
+        '<h4>Marienbergjoch</h4><a href="touren.html?gpx=Marienbergjoch.gpx">Detailbeschreibung</a>');
 		gpxGuffertrunde.bindPopup(
-        '<h4>Guffertrunde</h4><a target="_blank" href="index.html">Detailbeschreibung</a>');
+        '<h4>Guffertrunde</h4><a href="touren.html?gpx=Guffertrunde.gpx">Detailbeschreibung</a>');
 		gpxVorderesOetztal.bindPopup(
-        '<h4>VorderesOetztal</h4><a target="_blank" href="index.html">Detailbeschreibung</a>');
+        '<h4>VorderesOetztal</h4><a href="touren.html?gpx=VorderesOetztal.gpx">Detailbeschreibung</a>');
 	
 		
 

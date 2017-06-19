@@ -112,6 +112,7 @@ h2 {
 	color: #00667F;
 	font-size: 25px;  
 	padding-left: 10px;
+	background-color: rgba(255, 255, 255, 0.7);
 }
 
 /*Kurzbeschreibung Kursiv*/
@@ -169,7 +170,7 @@ table.vorstellung {
 }
 img.kreis {
      border-radius: 50%;
-	 max-width: 400px;
+	 max-width: 200px;
 	 
 	}
 
@@ -178,7 +179,7 @@ em,#Quelle {
 }
 
 #downloads{
-	background-color: rgba(41, 49, 51, 0.8);
+	background-color: rgba(205, 205, 205, 0.7);
 	text-align: center
 }
 
@@ -187,9 +188,15 @@ em,#Quelle {
 	text-align: right;
 }
 
+img.Bild {
+    width: 500px;
+	float: right;
+   padding:20px;
+   border:15px; 
+  
+   background-color:rgba(255, 255, 255, 0.7);
+}
 
-	
-	
 
 /* 
 FALLS WIR NOCH BILDER EINFÜGEN!!!!!!!!

@@ -41,7 +41,7 @@ window.TOURENINFO =
 		 "wetterLink2": "http://www.wetter.at/wetter/oesterreich/tirol/seefeld-in-tirol",
 		 "WetterOrt": "Seefeld in Tirol",
 		 
-		 //"Foto": "bilder/risstal-karwendel.jpg",
+		 "Foto": "bilder/risstal-karwendel.jpg",
 	  }
 		 
    ,
@@ -82,7 +82,7 @@ window.TOURENINFO =
          "specials1Koordinaten": "47.587565, 12.565102",
          "specials1Website": "http://www.steinplatte.tirol/de/aussichtsplattform-1.html",
 		 
-		 //"Foto": "bilder/waidrig_pillersee.jpg",
+		 "Foto": "bilder/waidrig_pillersee.jpg",
       }
    ,
    "MariaWaldrast.gpx": 
@@ -122,7 +122,7 @@ window.TOURENINFO =
          "specials1Koordinaten": "47.136798, 11.453339",
          "specials1Website": "http://www.tirol-infos.at/innsbruck/mariae-himmelfahrt-bei-pfons.html",
 		 
-		// "Foto": "bilder/MarieWaldrast.jpg",
+		"Foto": "bilder/MariaWaldrast.jpg",
       }
    ,
    "Kaiserwinkl.gpx": 
@@ -161,7 +161,7 @@ window.TOURENINFO =
          "specials1Koordinaten": "47.557505, 12.447250",
          "specials1Website": "https://www.kitzbueheler-alpen.com/de/kirchdorf/info/museum-im-metzgerhaus.html",
 		 
-		 //"Foto": "bilder/walchensee-Kaiswinkl.jpg",
+		 "Foto": "bilder/walchensee-Kaiswinkl.jpg",
       }
    ,
    "HoheSalve.gpx": 
@@ -200,7 +200,7 @@ window.TOURENINFO =
 		 "specials1": "Hexenwasser",
          "specials1Koordinaten": "47.480283, 12.197561",
          "specials1Website": "http://www.hexenwasser.at/de/homepage/",
-		 //"Foto": "bilder/wilder-kaiser-Brixental-Hohe salve.jpg",
+		 "Foto": "bilder/wilder-kaiser-Brixental-Hohe salve.jpg",
       }
    ,
    "Marienbergjoch.gpx": 
@@ -239,7 +239,7 @@ window.TOURENINFO =
          "specials1Koordinaten": "47.345703, 10.817517",
          "specials1Website": "https://de.wikipedia.org/wiki/Burg_Fernstein",
 		 
-		 //"Foto": "bilder/marienbergjoch.jpg",
+		 "Foto": "bilder/marienbergjoch.jpg",
       }
    ,
    "Guffertrunde.gpx": 
@@ -275,7 +275,7 @@ window.TOURENINFO =
          "specialsKoordinaten": "47.540179, 11.916547",
          "specialsWebsite": "https://www.alpbachtal.at/de/sommer/wandern/naturerlebnisklammen/kaiserklamm",
 		 
-		 //"Foto": "bilder/Kaiserhaus-Guffertrunde.jpg", 
+		 "Foto": "bilder/Kaiserhaus-Guffertrunde.jpg", 
       
 		
       }
@@ -316,7 +316,7 @@ window.TOURENINFO =
          "specials1Koordinaten": "47.228989, 10.844389",
          "specials1Website": "area47.at",
 		 
-		 //"Foto": "sautens-oetztal.jpg", 
+		 "Foto": "bilder/sautens-oetztal.jpg", 
       }
    
 }
