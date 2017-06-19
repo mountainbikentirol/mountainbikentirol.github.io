@@ -12,13 +12,13 @@
  
 
 
- */
+
 html { 
-  background: url("bilder/background.jpg") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	background: url("bilder/background.jpg") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
  
  
@@ -114,10 +114,8 @@ h5 {
 	background-color: rgba(255, 255, 255, 0.7);
 }
 
-
 /* Karte */
 #map {
-			
 	width: center;
 	height: 500px;
 	border: 1px solid black;
@@ -131,7 +129,6 @@ h5 {
     font-size: 16px;
     border: none;
     cursor: pointer;
-	
 }
 
 
@@ -152,7 +149,6 @@ table.vorstellung {
 img.kreis {
      border-radius: 50%;
 	 max-width: 200px;
-	 
 	}
 
 em,#Quelle {
@@ -174,35 +170,8 @@ img.Bild {
 	float: right;
    padding:20px;
    border:15px; 
-  
    background-color:rgba(255, 255, 255, 0.7);
 }
-
-
-/* 
-FALLS WIR NOCH BILDER EINFÜGEN!!!!!!!!
-Bilder mit Bildunterschriften 
-figure {
-	display: block;
-	margin: auto; 
-	text-align: center;
-	
-    
-}
-figure img {
-    display: inline;
-	margin: 0; 
-	width: 80%;
-	
-}
-figure figcaption {
-    font-size: 15px;
-	text-align: center;
-	color: rgba(255, 255, 255, 0.7); 
-    
-}*/
-
-
 
 /* Autor */
 p.author {
