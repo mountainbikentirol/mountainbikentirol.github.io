@@ -54,9 +54,6 @@ window.onload = function() {
         "OpenStreetMap": layers.osm,
     }).addTo(map);
 
-
-
-
     //GPX Tracks laden
     var gpxKarwendel = omnivore.gpx("bikedata/Karwendel.gpx").addTo(map);
     var gpxPillerseetal = omnivore.gpx("bikedata/Pillerseetal.gpx").addTo(map);
