@@ -23,12 +23,27 @@
 
 <body>
 
-    <div class="topnav" id="myTopnav">
-        <a href="index.html">Home</a>
-        <a href="touren.html">Touren</a>
-        <a href="team.html">Team</a>
-        <a href="gpx.html">Download</a>
+
+<div class="container">
+  <a href="index.html">Home</a>
+  
+  <div class="dropdown">
+    <button class="dropbtn">Touren</button>
+    <div class="dropdown-content">
+      <a href="touren.html?gpx=Karwendel.gpx">Karwendel</a>
+      <a href="touren.html?gpx=Pillerseetal.gpx">Pillerseetal</a>
+      <a href="touren.html?gpx=MariaWaldrast.gpx">Maria Waldrast</a>
+      <a href="touren.html?gpx=Kaiserwinkl.gpx">Kaiserwinkl</a>
+      <a href="touren.html?gpx=HoheSalve.gpx">Hohe Salve</a>
+      <a href="touren.html?gpx=Marienbergjoch.gpx">Marienbergjoch</a>
+      <a href="touren.html?gpx=Guffertrunde.gpx">Guffertrunde</a>
+	  <a href="touren.html?gpx=VorderesOetztal.gpx">Vorderes Ötztal</a>
     </div>
+
+  </div> 
+       <a href="team.html">Team</a>
+       <a href="gpx.html">Download</a>
+</div>
 
 
     <h1 id="Titel"></h1>
@@ -37,7 +52,8 @@
     <h5>
         <p id="Kurztext"></p>
     </h5>
-
+	
+	
     <select id="gpx">
 			<option value="" selected>Tourenauswahl</option>
 			<option value="Karwendel.gpx">Karwendel</option>
@@ -49,6 +65,7 @@
 			<option value="Guffertrunde.gpx">Guffertrunde</option>
 			<option value="VorderesOetztal.gpx">Vorderes Ötztal</option>
 	</select>
+  
 
     <div id="map"></div>
 
@@ -59,8 +76,7 @@
 
     <table border="1">
         <tr>
-
-            <td>
+			<td>
                 <h4>Start- und Endpunkt</h4>
                 <div id="Start"></div>
             </td>
@@ -156,7 +172,7 @@
 
     <script>
     </script>
-    <div id=h intergrundquelle>Quelle und © Hintergrundbild:
+    <div id=hintergrundquelle>Quelle und © Hintergrundbild:
         <a href=http://greywolf-graphics.com/images/mountain-biking-wallpaper/mountain-biking-wallpaper-34.jpg ">Greywolf Graphics</a></div>
 
 </body>

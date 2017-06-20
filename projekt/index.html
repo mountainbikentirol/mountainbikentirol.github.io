@@ -15,7 +15,7 @@
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
 
-    
+
     <script src="toureninfo.js"></script>
     <script src="homemap.js"></script>
     <link rel="stylesheet" href="styles.css" />
@@ -27,12 +27,27 @@
 
     <div class="parallax"></div>
 
-    <div class="topnav" id="myTopnav">
+    <div class="container">
         <a href="index.html">Home</a>
-        <a href="touren.html">Touren</a>
+
+        <div class="dropdown">
+            <button class="dropbtn">Touren</button>
+            <div class="dropdown-content">
+                <a href="touren.html?gpx=Karwendel.gpx">Karwendel</a>
+                <a href="touren.html?gpx=Pillerseetal.gpx">Pillerseetal</a>
+                <a href="touren.html?gpx=MariaWaldrast.gpx">Maria Waldrast</a>
+                <a href="touren.html?gpx=Kaiserwinkl.gpx">Kaiserwinkl</a>
+                <a href="touren.html?gpx=HoheSalve.gpx">Hohe Salve</a>
+                <a href="touren.html?gpx=Marienbergjoch.gpx">Marienbergjoch</a>
+                <a href="touren.html?gpx=Guffertrunde.gpx">Guffertrunde</a>
+                <a href="touren.html?gpx=VorderesOetztal.gpx">Vorderes Ötztal</a>
+            </div>
+
+        </div>
         <a href="team.html">Team</a>
         <a href="gpx.html">Download</a>
     </div>
+
 
 
 
@@ -118,6 +133,7 @@
     </script>
 
 </body>
-<div id=h intergrundquelle>Quelle und © Hintergrundbild:
+
+<div id=hintergrundquelle>Quelle und © Hintergrundbild:
     <a href=http://greywolf-graphics.com/images/mountain-biking-wallpaper/mountain-biking-wallpaper-34.jpg ">Greywolf Graphics</a></div>
 </html>

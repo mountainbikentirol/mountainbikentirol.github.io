@@ -583,8 +583,9 @@ window.onload = function() {
 
 
 
-    var tourenSelektor = document.getElementById("gpx");
-    tourenSelektor.onchange = function(evt) {
+
+      var tourenSelektor = document.getElementById("gpx");
+		tourenSelektor.onchange = function(evt) {
         console.log("change event: ", evt);
         console.log("GPX Track laden: ", tourenSelektor.selectedIndex);
         loadTrack(tourenSelektor.options[tourenSelektor.options.selectedIndex].value);
